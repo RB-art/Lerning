@@ -1,0 +1,41 @@
+<<!doctype html>
+    <html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Кредитный калькулятор</title>
+    </head>
+    
+    <body>
+        <ul>
+        <li>если клиенту нет 18 лет, то кредит он не получит</li>
+        <li>если клиенту от 18 до 21, то он может получить максимум 50000</li>
+        <li>если клиенту от 22 до 35, то он сможет получить максимум 400000</li>
+        <li>если клиенту от 36 до 65, то ему одобрят максимум 1000000</li>
+        <li>кредит могут выдавать суммами кратными 1000.</li>
+        </ul>
+    
+        <script>
+            const bornYear = +prompt(`Input yor born year`);
+            if (bornYear !== 0 && !isNaN(bornYear % 2)){
+            const age = new Date().getFullYear() - bornYear;
+            if(age < 18){
+                alert(`you hhave less than 18 years, you can not take a credit`);
+                } else if(age >= 18 && age <= 21){
+                const amountAge18To21 = +prompt(`We can acept maximum 50000 \nEnter amount round up to 1000`)  
+                alert(`You entered sum not around 1000, we can acept ${Math.round(amountAge18To21/1000)*1000}`);
+                } else if(age >= 22 && age <= 35){
+                const amountAge22To35 = +prompt(`We can acept maximum 400000 \nEnter amount round up to 1000`)  
+                alert(`You entered sum not around 1000, we can acept ${Math.round(amountAge22To35/1000)*1000}`);
+                }else if(age >= 36 && age <= 65){
+                const amountAge36To65 = +prompt(`We can acept maximum 100000 \nEnter amount round up to 1000`)  
+                alert(`You entered sum not around 1000, we can acept ${Math.round(amountAge36To65/1000)*1000}`);
+                } 
+            } else {
+            alert(`input born year as number`)
+            }
+        </script>
+    </body>

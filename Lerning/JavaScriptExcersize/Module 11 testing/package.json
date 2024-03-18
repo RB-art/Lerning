@@ -1,0 +1,19 @@
+{
+  "name": "module-11-testing",
+  "version": "1.0.0",
+  "description": "First test",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "RB-art",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
+    "babel-jest": "^29.7.0"
+  }
+}

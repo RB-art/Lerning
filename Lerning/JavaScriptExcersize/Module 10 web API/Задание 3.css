@@ -1,0 +1,115 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.chat-wrapper {
+    width: fit-content;
+    height: auto;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .chat-wrapper__head {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .chat-wrapper__body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+  }
+
+  .chat-wrapper__body,
+  .chat-wrapper__head-message {
+    border: 2px solid #b5b5b5;
+  }
+
+  .chat-wrapper__head-message {
+    padding: 5px;
+    width: 210px;
+  }
+
+  button {
+    cursor: pointer;
+    background: #315efb;
+    border-radius: 10px;
+    /* background-color: #b5b5b5; */
+    border: 1px solid #707070;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  button:hover {
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 4px 0px rgba(34, 60, 80, 0.2);
+  }
+
+  .message-wrapper {
+    display: flex;
+    margin: 5px 15px;
+  }
+
+  .message-wrapper.server-message {
+    justify-content: flex-start;
+  }
+
+  .message-wrapper.client-message {
+    justify-content: flex-end;
+  }
+
+  .message {
+    width: 170px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 4px 0px rgba(34, 60, 80, 0.2);
+    position: relative;
+    word-break: break-all;
+  }
+
+  .server-message .message {
+    background-color: #bde4fa;
+  }
+
+  .client-message .message {
+    background-color: #acf9d1;
+    text-align: right;
+  }
+
+  .server-message .message::before,
+  .client-message .message::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+  }
+
+  .server-message .message::before {
+    border: 0.5em solid #bde4fa;
+    border-color: #bde4fa #bde4fa transparent transparent;
+    top: 0;
+    left: -13px;
+  }
+
+  .client-message .message::after {
+    border: 0.5em solid #acf9d1;
+    border-color: #acf9d1 #acf9d1 transparent transparent;
+    top: 0;
+    right: -13px;
+    transform: rotate(-90deg);
+  }
+
+  .chat-wrapper__error {
+    margin-top: 20px;
+    color: red;
+  }

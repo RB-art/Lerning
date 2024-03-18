@@ -1,0 +1,54 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 20em;
+  }
+
+  h1{
+    font-size: 25px;
+    justify-items: center;
+       
+  }
+
+  .loader{
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    color: black;
+    font-size: 20px;
+    font-family: helvetica;
+  }
+
+  .btn{
+    width: 15em;
+    padding: 0.5em;
+    border: none;
+    background: gold;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .btn:hover{
+    background: goldenrod;
+  }
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin: auto;
+    margin-top: 2em;
+    /* justify-self: auto; */
+    justify-content: center;
+  }
+  img {
+    width: 20em;
+  }
